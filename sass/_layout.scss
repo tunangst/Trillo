@@ -1,0 +1,101 @@
+.container {
+    max-width: 120rem;
+    min-height: 50rem;
+    margin: 8rem auto;
+    background-color: var(--grey-light-1);
+    box-shadow: var(--shadow-dark);
+
+    @media only screen and (max-width: $break-huge) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: var(--color-white);
+    border-bottom: var(--bot-border);
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+    @media only screen and (max-width: $break-tiny) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
+}
+
+.content {
+    display: flex;
+
+    @media only screen and (max-width: $break-mid) {
+        flex-direction: column;
+    }
+
+// ======================================================================inner items
+    .sidebar {
+        background-color: var(--grey-dark-1);
+        flex: 0 0 18%; //flex: grow shrink basis
+
+        display: flex; //nested flex
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hotel-view {
+        background-color: var(--color-white);
+        flex: 1;
+        
+    }
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--grey-light-1);
+    border-bottom: var(--bot-border);
+    font-size: 1.4rem;
+
+    
+    @media only screen and (max-width: $break-mid) {
+        padding: 3rem;
+    }
+    @media only screen and (max-width: $break-small) {
+        flex-direction: column;
+    }
+    
+    .description {
+        margin-right: 4.5rem;
+        background-color: var(--color-white);
+        box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+        padding: 3rem;
+
+        flex: 0 0 60%; // grow shrink flexbasis
+
+        
+        @media only screen and (max-width: $break-mid) {
+            padding: 2rem;
+            margin-right: 3rem;
+        }
+        @media only screen and (max-width: $break-small) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+        }
+    }
+    .user-review {
+        flex: 1;
+
+        display: flex; //nested flex
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
